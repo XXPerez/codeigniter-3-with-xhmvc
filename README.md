@@ -3,7 +3,7 @@ Codeigniter 3.0.4 with XHMVC
 
 App: base
 
-Navigate to codeigniter-3-0-4-with-xhmvc/apps/base/www/
+Clone and browse to your local codeigniter-3-0-4-with-xhmvc/apps/base/www/ directory
 
 
 What is XHMVC:  http://xhmvc.4amics.com/applications/demo/www/user_guide/
