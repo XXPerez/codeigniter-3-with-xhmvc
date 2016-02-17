@@ -177,8 +177,6 @@ if ( ! function_exists('load_class'))
 				require_once(APPPATH.$directory.'/'.$name.'.php');
 			}
 		}
-                // Avoid to load twice Session, drivers is loaded from MX
-                if($class == 'Session') { return $_classes[$class]; }
 
 		// Did we find the class?
 		if ($name === FALSE)
