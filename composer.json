@@ -1,6 +1,6 @@
 {
-	"description": "The CodeIgniter framework",
-	"name": "codeigniter/framework",
+	"description": "The CodeIgniter XHMVC framework",
+	"name": "xmadmax/codeginiter-3-xhmvc",
 	"type": "project",
 	"homepage": "https://codeigniter.com",
 	"license": "MIT",
