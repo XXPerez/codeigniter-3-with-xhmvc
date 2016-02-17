@@ -20,6 +20,19 @@ class Welcome extends MY_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+            $this->config->load('welcome');
+            $this->load->helper('welcome');
+            $this->load->library('welcomelib');
+            $this->load->model('welcome_model');
+            $string = $this->config->item('helo');
+            echo $string;
+            $string = welcome($string);
+            echo "->".$string;
+            $string = $this->welcomelib->test($string);
+            echo "->".$string;
+            $string = $this->welcome_model->test($string);
+            echo "->".$string;
+            $this->load->view('welcome_message');
 	}
+        
 }
