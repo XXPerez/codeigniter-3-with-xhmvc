@@ -1,12 +1,12 @@
 .DS_Store
 
-application/cache/*
-!application/cache/index.html
-!application/cache/.htaccess
+/apps/base/application/cache/*
+!/apps/base/application/cache/index.html
+!/apps/base/application/cache/.htaccess
 
-application/logs/*
-!application/logs/index.html
-!application/logs/.htaccess
+/apps/base/application/logs/*
+!/apps/base/application/logs/index.html
+!/apps/base/application/logs/.htaccess
 
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
