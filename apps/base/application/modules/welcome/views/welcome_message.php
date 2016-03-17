@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter 3.0.4 XHMVC</title>
+	<title>Welcome to CodeIgniter <?php echo CI_VERSION;?> XHMVC</title>
 
 	<style type="text/css">
 
