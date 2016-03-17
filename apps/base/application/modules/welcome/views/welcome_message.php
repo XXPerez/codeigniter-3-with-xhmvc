@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter 3.0.4 XHMVC! apps->base</h1>
+	<h1>Welcome to CodeIgniter <?php echo CI_VERSION;?> XHMVC! apps->base</h1>
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
