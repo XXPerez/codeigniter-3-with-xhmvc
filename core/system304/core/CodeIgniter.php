@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @var	string
  *
  */
-	define('CI_VERSION', '3.0.4');
+	define('CI_VERSION', '3.0.5');
 
 /*
  * ------------------------------------------------------
@@ -359,7 +359,7 @@ if ( ! is_php('5.4'))
 	 *
 	 * Returns current CI instance object
 	 *
-	 * @return object
+	 * @return CI_Controller
 	 */
 	function &get_instance()
 	{
@@ -398,7 +398,7 @@ if ( ! is_php('5.4'))
 	$e404 = FALSE;
 	$class = ucfirst($RTR->class);
 	$method = $RTR->method;
- 
+
 	if (empty($class))
 	{
 		$e404 = TRUE;
