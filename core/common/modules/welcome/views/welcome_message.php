@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter 3.0.4 XHMVC</title>
+	<title>Welcome to CodeIgniter 3.0.6 XHMVC</title>
 
 	<style type="text/css">
 
@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter 3.0.4 XHMVC! apps->base</h1>
+	<h1>Welcome to CodeIgniter 3.0.6 XHMVC! apps->base</h1>
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
