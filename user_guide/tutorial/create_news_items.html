@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Create news items &mdash; CodeIgniter 3.0.4 documentation</title>
+  <title>Create news items &mdash; CodeIgniter 3.0.6 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0.4 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.6 documentation" href="../index.html"/>
         <link rel="up" title="Tutorial" href="index.html"/>
         <link rel="next" title="Conclusion" href="conclusion.html"/>
         <link rel="prev" title="News section" href="news_section.html"/> 
@@ -435,7 +435,7 @@ this functionality.</p>
 input the information to be stored. This means you&#8217;ll be needing a form
 with two fields, one for the title and one for the text. You&#8217;ll derive
 the slug from our title in the model. Create the new view at
-application/views/news/create.php.</p>
+<em>application/views/news/create.php</em>.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$title</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="nt">&lt;/h2&gt;</span>
 
 <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nx">validation_errors</span><span class="p">();</span> <span class="cp">?&gt;</span>
@@ -454,7 +454,7 @@ application/views/news/create.php.</p>
 </pre></div>
 </div>
 <p>There are only two things here that probably look unfamiliar to you: the
-form_open() function and the validation_errors() function.</p>
+<tt class="docutils literal"><span class="pre">form_open()</span></tt> function and the <tt class="docutils literal"><span class="pre">validation_errors()</span></tt> function.</p>
 <p>The first function is provided by the <a class="reference internal" href="../helpers/form_helper.html"><em>form
 helper</em></a> and renders the form element and
 adds extra functionality, like adding a hidden <a class="reference internal" href="../libraries/security.html"><em>CSRF prevention
@@ -491,7 +491,7 @@ validation</em></a> library to do this.</p>
 </div>
 <p>The code above adds a lot of functionality. The first few lines load the
 form helper and the form validation library. After that, rules for the
-form validation are set. The set_rules() method takes three arguments;
+form validation are set. The <tt class="docutils literal"><span class="pre">set\_rules()</span></tt> method takes three arguments;
 the name of the input field, the name to be used in error messages, and
 the rule. In this case the title and text fields are required.</p>
 <p>CodeIgniter has a powerful form validation library as demonstrated
@@ -501,7 +501,7 @@ here</em></a>.</p>
 validation ran successfully. If it did not, the form is displayed, if it
 was submitted <strong>and</strong> passed all the rules, the model is called. After
 this, a view is loaded to display a success message. Create a view at
-application/views/news/success.php and write a success message.</p>
+<em>application/views/news/success.php</em> and write a success message.</p>
 </div>
 <div class="section" id="model">
 <h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
@@ -532,18 +532,18 @@ the string you pass it, replacing all spaces by dashes (-) and makes
 sure everything is in lowercase characters. This leaves you with a nice
 slug, perfect for creating URIs.</p>
 <p>Let&#8217;s continue with preparing the record that is going to be inserted
-later, inside the $data array. Each element corresponds with a column in
+later, inside the <tt class="docutils literal"><span class="pre">$data</span></tt> array. Each element corresponds with a column in
 the database table created earlier. You might notice a new method here,
-namely the post() method from the <a class="reference internal" href="../libraries/input.html"><em>input
+namely the <tt class="docutils literal"><span class="pre">post()</span></tt> method from the <a class="reference internal" href="../libraries/input.html"><em>input
 library</em></a>. This method makes sure the data is
 sanitized, protecting you from nasty attacks from others. The input
-library is loaded by default. At last, you insert our $data array into
+library is loaded by default. At last, you insert our <tt class="docutils literal"><span class="pre">$data</span></tt> array into
 our database.</p>
 </div>
 <div class="section" id="routing">
 <h2>Routing<a class="headerlink" href="#routing" title="Permalink to this headline">¶</a></h2>
 <p>Before you can start adding news items into your CodeIgniter application
-you have to add an extra rule to config/routes.php file. Make sure your
+you have to add an extra rule to <em>config/routes.php</em> file. Make sure your
 file contains the following. This makes sure CodeIgniter sees &#8216;create&#8217;
 as a method instead of a news item&#8217;s slug.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;news/create&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;news/create&#39;</span><span class="p">;</span>
@@ -579,7 +579,7 @@ Add some news and check out the different pages you made.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Jan 13, 2016.
+      Last updated on Mar 21, 2016.
     </p>
   </div>
 
@@ -600,7 +600,7 @@ Add some news and check out the different pages you made.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0.4',
+            VERSION:'3.0.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

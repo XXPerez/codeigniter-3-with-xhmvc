@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Static pages &mdash; CodeIgniter 3.0.4 documentation</title>
+  <title>Static pages &mdash; CodeIgniter 3.0.6 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0.4 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.6 documentation" href="../index.html"/>
         <link rel="up" title="Tutorial" href="index.html"/>
         <link rel="next" title="News section" href="news_section.html"/>
         <link rel="prev" title="Tutorial" href="index.html"/> 
@@ -442,7 +442,7 @@ you&#8217;ll see URL patterns that match:</p>
 <div><a class="reference external" href="http://example.com/[controller-class]/[controller-method]/[arguments">http://example.com/[controller-class]/[controller-method]/[arguments</a>]</div></blockquote>
 <p>As URL schemes become more complex, this may change. But for now, this
 is all we will need to know.</p>
-<p>Create a file at application/controllers/Pages.php with the following
+<p>Create a file at <em>application/controllers/Pages.php</em> with the following
 code.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">class</span> <span class="nc">Pages</span> <span class="k">extends</span> <span class="nx">CI_Controller</span> <span class="p">{</span>
@@ -500,7 +500,7 @@ If you like to be particularly un-original, try &#8220;Hello World!&#8221;.</p>
 page actually exists:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">view</span><span class="p">(</span><span class="nv">$page</span> <span class="o">=</span> <span class="s1">&#39;home&#39;</span><span class="p">)</span>
 <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="nb">file_exists</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;/views/pages/&#39;</span><span class="o">.</span><span class="nv">$page</span><span class="o">.</span><span class="s1">&#39;.php&#39;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="nb">file_exists</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;views/pages/&#39;</span><span class="o">.</span><span class="nv">$page</span><span class="o">.</span><span class="s1">&#39;.php&#39;</span><span class="p">))</span>
         <span class="p">{</span>
                 <span class="c1">// Whoops, we don&#39;t have a page for that!</span>
                 <span class="nx">show_404</span><span class="p">();</span>
@@ -583,7 +583,7 @@ method in the pages controller? Awesome!</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Jan 13, 2016.
+      Last updated on Mar 21, 2016.
     </p>
   </div>
 
@@ -604,7 +604,7 @@ method in the pages controller? Awesome!</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0.4',
+            VERSION:'3.0.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

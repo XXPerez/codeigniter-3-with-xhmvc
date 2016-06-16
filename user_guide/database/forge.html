@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Database Forge Class &mdash; CodeIgniter 3.0.4 documentation</title>
+  <title>Database Forge Class &mdash; CodeIgniter 3.0.6 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0.4 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.6 documentation" href="../index.html"/>
         <link rel="up" title="Database Reference" href="index.html"/>
         <link rel="next" title="Database Utility Class" href="utilities.html"/>
         <link rel="prev" title="Database Caching Class" href="caching.html"/> 
@@ -532,6 +532,7 @@ the field will default to &#8220;NOT NULL&#8221;.</li>
 <li>auto_increment/true : generates an auto_increment flag on the
 field. Note that the field type must be a type that supports this,
 such as integer.</li>
+<li>unique/true : to generate a unique key for the field definition.</li>
 </ul>
 <div class="highlight-ci"><div class="highlight"><pre><span class="nv">$fields</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
         <span class="s1">&#39;blog_id&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
@@ -543,6 +544,7 @@ such as integer.</li>
         <span class="s1">&#39;blog_title&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
                 <span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;VARCHAR&#39;</span><span class="p">,</span>
                 <span class="s1">&#39;constraint&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;100&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;unique&#39;</span> <span class="o">=&gt;</span> <span class="k">TRUE</span><span class="p">,</span>
         <span class="p">),</span>
         <span class="s1">&#39;blog_author&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
                 <span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span><span class="s1">&#39;VARCHAR&#39;</span><span class="p">,</span>
@@ -982,7 +984,7 @@ change the name you can add a &#8220;name&#8221; key into the field defining arr
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Jan 13, 2016.
+      Last updated on Mar 21, 2016.
     </p>
   </div>
 
@@ -1003,7 +1005,7 @@ change the name you can add a &#8220;name&#8221; key into the field defining arr
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0.4',
+            VERSION:'3.0.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

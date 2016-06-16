@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Query Builder Class &mdash; CodeIgniter 3.0.4 documentation</title>
+  <title>Query Builder Class &mdash; CodeIgniter 3.0.6 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0.4 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.6 documentation" href="../index.html"/>
         <link rel="up" title="Database Reference" href="index.html"/>
         <link rel="next" title="Transactions" href="transactions.html"/>
         <link rel="prev" title="Query Helper Methods" href="helpers.html"/> 
@@ -2305,7 +2305,7 @@ joined with &#8216;AND&#8217; if appropriate.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::insert_batch">
-<tt class="descname">insert_batch</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::insert_batch" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">insert_batch</tt><big>(</big><em>$table</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">[</span>, <em>$batch_size = 100</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::insert_batch" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2314,6 +2314,7 @@ joined with &#8216;AND&#8217; if appropriate.</p>
 <li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
 <li><strong>$set</strong> (<em>array</em>) &#8211; Data to insert</li>
 <li><strong>$escape</strong> (<em>bool</em>) &#8211; Whether to escape values and identifiers</li>
+<li><strong>$batch_size</strong> (<em>int</em>) &#8211; Count of rows to insert at once</li>
 </ul>
 </td>
 </tr>
@@ -2325,7 +2326,13 @@ joined with &#8216;AND&#8217; if appropriate.</p>
 </tr>
 </tbody>
 </table>
-<p>Compiles and executes batch INSERT statements.</p>
+<p>Compiles and executes batch <tt class="docutils literal"><span class="pre">INSERT</span></tt> statements.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When more than <tt class="docutils literal"><span class="pre">$batch_size</span></tt> rows are provided, multiple
+<tt class="docutils literal"><span class="pre">INSERT</span></tt> queries will be executed, each trying to insert
+up to <tt class="docutils literal"><span class="pre">$batch_size</span></tt> rows.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -2381,7 +2388,7 @@ joined with &#8216;AND&#8217; if appropriate.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::update_batch">
-<tt class="descname">update_batch</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::update_batch" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">update_batch</tt><big>(</big><em>$table</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">[</span>, <em>$batch_size = 100</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::update_batch" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2390,6 +2397,7 @@ joined with &#8216;AND&#8217; if appropriate.</p>
 <li><strong>$table</strong> (<em>string</em>) &#8211; Table name</li>
 <li><strong>$set</strong> (<em>array</em>) &#8211; Field name, or an associative array of field/value pairs</li>
 <li><strong>$value</strong> (<em>string</em>) &#8211; Field value, if $set is a single field</li>
+<li><strong>$batch_size</strong> (<em>int</em>) &#8211; Count of conditions to group in a single query</li>
 </ul>
 </td>
 </tr>
@@ -2401,7 +2409,13 @@ joined with &#8216;AND&#8217; if appropriate.</p>
 </tr>
 </tbody>
 </table>
-<p>Compiles and executes batch UPDATE statements.</p>
+<p>Compiles and executes batch <tt class="docutils literal"><span class="pre">UPDATE</span></tt> statements.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When more than <tt class="docutils literal"><span class="pre">$batch_size</span></tt> field/value pairs are provided,
+multiple queries will be executed, each handling up to
+<tt class="docutils literal"><span class="pre">$batch_size</span></tt> field/value pairs.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -2650,7 +2664,7 @@ a DELETE statement will be used instead.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Jan 13, 2016.
+      Last updated on Mar 21, 2016.
     </p>
   </div>
 
@@ -2671,7 +2685,7 @@ a DELETE statement will be used instead.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0.4',
+            VERSION:'3.0.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false
