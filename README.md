@@ -1,5 +1,5 @@
-# codeigniter-3-0-5-with-xhmvc
-Codeigniter 3.0.5 with XHMVC
+# codeigniter-3-0-6-with-xhmvc
+Codeigniter 3.0.6 with XHMVC
 
 What is XHMVC:  http://xhmvc.4amics.com/applications/demo/www/user_guide/
 
