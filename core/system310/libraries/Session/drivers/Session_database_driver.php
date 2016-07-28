@@ -230,7 +230,6 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 				'id' => $session_id,
 				'ip_address' => $_SERVER['REMOTE_ADDR'],
 				'timestamp' => time(),
-                                'idx' => time().rand(100000000,999999999),
 				'data' => ($this->_platform === 'postgre' ? base64_encode($session_data) : $session_data)
 			);
 
