@@ -205,7 +205,8 @@ class MX_Router extends CI_Router
 		}
 
 		/* core controller exists? */
-                if (is_file(COMMONPATH.'controllers/'.$module.$ext)) {
+                if (is_file(COMMONPATH.'controllers/'.ucfirst($module).$ext))
+		{
 			return $segments;
 		}
 		
